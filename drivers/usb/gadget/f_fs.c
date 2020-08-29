@@ -765,7 +765,7 @@ static ssize_t ffs_epfile_io(struct file *file,
 	struct ffs_ep *ep;
 	struct ffs_data *ffs = epfile->ffs;
 	char *data = NULL;
-	ssize_t ret;
+	ssize_t ret, data_len = -EINVAL;
 	int halt;
 	int buffer_len = 0;
 
